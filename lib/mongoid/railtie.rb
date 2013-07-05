@@ -129,16 +129,17 @@ module Rails #:nodoc:
         app.config.middleware.use "Rack::Mongoid::Middleware::IdentityMap"
       end
 
+      # DEPRECATED: Deprecated in Rails4 ActiveModel 4.0.0 gem 
       # Instantitate any registered observers after Rails initialization and
       # instantiate them after being reloaded in the development environment
-      initializer "instantiate observers" do
-        config.after_initialize do
-          ::Mongoid::instantiate_observers
-          ActionDispatch::Reloader.to_prepare do
-            ::Mongoid.instantiate_observers
-          end
-        end
-      end
+      #initializer "instantiate observers" do
+        #config.after_initialize do
+          #::Mongoid::instantiate_observers
+          #ActionDispatch::Reloader.to_prepare do
+          #  ::Mongoid.instantiate_observers
+          #end
+        #end
+      #end
     end
   end
 end

@@ -15,7 +15,8 @@ module Mongoid #:nodoc
     include ActiveModel::Conversion
     include ActiveModel::MassAssignmentSecurity
     include ActiveModel::Naming
-    include ActiveModel::Observing
+    # DEPRECATED: Deprecated in Rails4 ActiveModel 4.0.0 gem 
+    # include ActiveModel::Observing
     include ActiveModel::Serializers::JSON
     include ActiveModel::Serializers::Xml
     include Mongoid::Atomic

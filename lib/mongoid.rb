@@ -63,7 +63,8 @@ require "mongoid/multi_parameter_attributes"
 require "mongoid/multi_database"
 require "mongoid/named_scope"
 require "mongoid/nested_attributes"
-require "mongoid/observer"
+# DEPRECATED: Deprecated in Rails4 ActiveModel 4.0.0 gem 
+# require "mongoid/observer"
 require "mongoid/persistence"
 require "mongoid/reloading"
 require "mongoid/safety"
@@ -143,7 +144,7 @@ module Mongoid #:nodoc
   #   Mongoid.database = Mongo::Connection.new.db("test")
   #
   # @since 1.0.0
-  delegate *(Config.public_instance_methods(false) +
-    ActiveModel::Observing::ClassMethods.public_instance_methods(false) <<
-    { :to => Config })
+  delegate *(Config.public_instance_methods(false) << { :to => Config })
+    #ActiveModel::Observing::ClassMethods.public_instance_methods(false) <<
+    #{ :to => Config })
 end

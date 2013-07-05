@@ -14,7 +14,8 @@ module Mongoid #:nodoc
   module Config
     extend self
     extend Options
-    include ActiveModel::Observing
+    # DEPRECATED: Deprecated in Rails4 ActiveModel 4.0.0 gem 
+    # include ActiveModel::Observing
 
     # @attribute [rw] master The master database.
     attr_accessor :master

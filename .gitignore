@@ -21,3 +21,4 @@ doc/*
 *.profile.pdf
 *.symbols
 SPECS.txt
+.project

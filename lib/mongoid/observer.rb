@@ -1,4 +1,6 @@
 # encoding: utf-8
+# DEPRECATED: Deprecated in Rails4 ActiveModel 4.0.0 gem 
+=begin
 module Mongoid #:nodoc:
 
   # Observer classes respond to life cycle callbacks to implement trigger-like
@@ -179,3 +181,4 @@ module Mongoid #:nodoc:
 
   end
 end
+=end
